@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import { Display } from './components/display';
+import { useReducer } from 'react';
+
+// function debouncer( delay, callback ){
+//   var debounce;
+//   return function(e){
+//       debounce && clearTimeout(debounce);
+//       debounce = setTimeout(function(){
+//           callback(e)
+//       },delay)
+//   }
+// }
+// function throttle( fn, wait ){
+//     let lastCall = 0;
+//     return function(){
+//     if( Date.now() - lastCall > wait  ){
+//       lastCall = Date.now()
+//       fn()
+//     }
+//   }
+// }
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Display/>
     </div>
   );
 }
