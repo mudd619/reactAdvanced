@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import {Button ,Stack,  Divider} from "@mui/material"
+import { Todo } from './components/todos';
+import { Route, Switch } from 'react-router';
+import { Edit } from './components/edit';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    //   <Button  size ="large" color="error" variant="contained">heyy</Button>
+    //   <Button color="error" variant="outlined">heyy</Button>
+    // 
+    <div>
+      <Switch>
+        <Route exact path="/"><Todo/></Route>
+        <Route path="/:id/edit"><Edit/></Route>
+      </Switch>
     </div>
   );
 }

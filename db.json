@@ -1,0 +1,39 @@
+{
+  "todos": [
+    {
+      "task": "Hunting",
+      "status": true,
+      "id": 1
+    },
+    {
+      "task": "Swimming",
+      "status": false,
+      "id": 2
+    },
+    {
+      "task": "Music",
+      "status": false,
+      "id": 3
+    },
+    {
+      "task": "Games",
+      "status": false,
+      "id": 4
+    },
+    {
+      "task": "volleyball",
+      "status": false,
+      "id": 6
+    },
+    {
+      "task": "singing",
+      "status": false,
+      "id": 7
+    },
+    {
+      "task": "running",
+      "status": false,
+      "id": 8
+    }
+  ]
+}
