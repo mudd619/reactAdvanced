@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect, useState } from "react"
-import { AddError, AddLoading, AddSucess, Delete, GetError, GetLoading, GetSuccess, handleAdd, Toggle } from "../redux/action"
+import { AddError, AddLoading, AddSucess, Delete, GetError, GetLoading, GetSuccess, handleAdd, Toggle } from "../todoRedux/action"
 import {v4 as uuid} from "uuid";
 import axios from "axios"
 import { Link } from "react-router-dom";
 
 function Todo(){
 
-    const {setLoading ,setError , data} = useSelector((state)=>{return state.todo});
+    const {setLoading ,setError , data} = useSelector((state)=>{return state.todo.todo});
     
     const dispatch = useDispatch();
     const [inp,setInp] = useState("");

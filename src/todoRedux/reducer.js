@@ -1,8 +1,14 @@
 import { ADD_TASK, ADD_TASK_ERROR, ADD_TASK_LOADING, ADD_TASK_SUCCESS, DELETE, GET_TASK_ERROR, GET_TASK_LOADING, GET_TASK_SUCCESS, TOGGLE } from "./actionType";
 
+const initState = {
+    todo : {
+        setLoading:false,
+        setError : false,
+        data:[]
+    }
+}
 
-
-export const reducer = (state,{type,payload})=>{
+export const reducer = (state=initState,{type,payload})=>{
     switch (type) {
         case ADD_TASK:
             return {

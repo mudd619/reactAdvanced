@@ -3,13 +3,13 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-import { GetError, GetLoading, GetSuccess } from "../redux/action";
+import { GetError, GetLoading, GetSuccess } from "../todoRedux/action";
 
 
 export function TodoDetail(){
     const para = useParams();
 
-    const {setLoading,setError ,data} = useSelector((state)=>{return state.todo});
+    const {setLoading,setError ,data} = useSelector((state)=>{return state.todo.todo});
     const dispatch = useDispatch()
 
     const handleIndi = ()=>{

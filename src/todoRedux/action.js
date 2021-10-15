@@ -40,7 +40,7 @@ export const AddSucess = ()=>{
     }
 }
 
-export const GetLoading = ()=>{
+export const GetLoading = () => ()=>{
     return {
         type : GET_TASK_LOADING
     }
