@@ -1,0 +1,16 @@
+{
+  "todos": [
+    {
+      "task": "running",
+      "status": false,
+      "category": "Personal",
+      "id": 1
+    },
+    {
+      "task": "swim",
+      "status": true,
+      "category": "Official",
+      "id": 2
+    }
+  ]
+}

@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import { Home } from './components/home';
+import { SideBar } from './components/sidebar';
+import { useDispatch, useSelector } from 'react-redux';
+import { Route, Switch, useHistory } from 'react-router';
+import { Login } from './components/login';
+import { All } from './components/all';
+import { Personal } from './components/personal';
+import { Official } from './components/official';
+import { Others } from './components/others';
+import { Edit } from './components/editTodo';
 
 function App() {
+
+  const {token} = useSelector((state)=> state.auth);
+console.log(token)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {token ? <><SideBar/>
+      <Switch>
+        <Route exact path="/"><Home/></Route>
+        <Route path="/all"><All/></Route>
+        <Route path="/personal"><Personal/></Route>
+        <Route path="/official"><Official/></Route>
+        <Route path="/others"><Others/></Route>
+        <Route path="/edit/:id"><Edit/></Route>
+      </Switch></> :
+      <Login/>}
     </div>
   );
 }
